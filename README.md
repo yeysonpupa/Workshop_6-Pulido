@@ -10,7 +10,11 @@ Además, se mostrará el proceso de integración de la configuración con la pla
 ## Marco Teórico
 
 * Internet de las Cosas - IoT:
-  El término de Internet de las Cosas nace con la necesidad de interconexión para simplificar numerosos aspectos de nuestra vida diaria, facilitando no sólo tareas cotidiana, sino que también procesos en el ámbito industrial mediante la automatización y el control remoto [1]. Es por esto que, IoT se refire a la red de equipos, máquinas, productos y dispositivos conectados entre sí, los cuales pueden comunicarse tanto con la nube como entre los propios dispositivos [2], lo cual es soportado gracias al hardware y software que reune y procesa todos los datos provenientes de múltiples dispositivos; usualmente empleando tecnologías de machine learning e inteligencia artificial con el objetivo de realizar decisiones bien fundamentadas ante los usuarios [3].
+
+El término de Internet de las Cosas nace con la necesidad de interconexión para simplificar numerosos aspectos de nuestra vida diaria, facilitando no sólo tareas cotidiana, sino que también procesos en el ámbito industrial mediante la automatización y el control remoto [1]. Es por esto que, IoT se refire a la red de equipos, máquinas, productos y dispositivos conectados entre sí, los cuales pueden comunicarse tanto con la nube como entre los propios dispositivos [2], lo cual es soportado gracias al hardware y software que reune y procesa todos los datos provenientes de múltiples dispositivos; usualmente empleando tecnologías de machine learning e inteligencia artificial con el objetivo de realizar decisiones bien fundamentadas ante los usuarios [3].
+
+Dentro de la industria 4.0, IoT tiene diversos campos de acción, desde las redes eléctricas inteligentes, pasando por ciudades inteligentes, cadenas de suministro digitales inteligentes, hasta proceso de fabricación inteligene y mantenimiento preventivo y predictivo; todo esto genera un volúmen de datos inimaginable, es por esto que se utlizan paneles de control y alertas en tiempo real con tal de obtener claridad sobre indicadores de rendimiento, estadísticas de tiempo medio entre averías y otros datos relevantes [4].
+
 * Controladores de Dos Niveles:
 * Comunicación I2C:
 * ThingSpeak:
@@ -39,3 +43,5 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 [2] Azure. (s. f. ). "¿Qué es IoT?". [En línea]. Disponible en: https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-iot (Accedido Mayo 1, 2024).
 
 [3] AWS. (2023). "¿Qué es IoT (Internet de las cosas)?". [En línea]. Disponible en: https://aws.amazon.com/es/what-is/iot/#:~:text=El%20t%C3%A9rmino%20IoT%2C%20o%20Internet,como%20entre%20los%20propios%20dispositivos. (Accedido Mayo 1, 2024).
+
+[4] Oracle. (s. f. ). "¿Qué es el IoT?". [En línea]. Disponible en: https://www.oracle.com/co/internet-of-things/what-is-iot/ (Accedido Mayo 1, 2024).
