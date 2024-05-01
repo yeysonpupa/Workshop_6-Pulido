@@ -37,9 +37,15 @@ Para la realización de este workshop, se hizo uso del sensor de temperatura ana
 
 ![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/c545cdb4-a5ea-4e0c-919e-695c9efc0b6d)
 
-Figura 1: Sensor de temperatura analógico LM35DZ [9].
+Figura 2: Sensor de temperatura analógico LM35DZ [9].
 
 ## Diagrama de Actividad
+
+Para entender la lógica de diseño que debe seguir todo el sistema, se generó el diagrama de actividades mostrado en la Figura 3, el cual está dividido en carriles con cada agente involucrado para el correcto funcionamiento del sistema. En este se evidencia el camino que deben seguir los datos desde la toma analógica en el sensor de temperatura LM35DZ, pasando por su conversión digital en el Arduino esclavo y posterior envío al Arduino maestro, donde además de hacer la conexión con ThinkSpeak, se evalúa el valor de temperatura actual para saber si es necesario o no activar la alerta LED.
+
+![Diagrama sin título drawio](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/6311d2fb-5615-4e8d-a7a4-00827c46f1d9)
+
+Figura 3: Diagrama de Actividad del sistema [9].
 
 ## Circuito
 
