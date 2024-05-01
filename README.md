@@ -115,7 +115,7 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 
 Se puede concluir que el sistema fue capaz de responder de manera adecuada a las variaciones de temperatura en tiempo real, activando el LED cuando la temperatura excedía los 30°C, lo que sirve como una alerta visual efectiva para los usuarios. Esto indica que el diseño del sistema y de la lógica de programación implementada en las placas fue la adecuada para manejar los escenarios al momento de las pruebas en el prototipo real.
 
-A su vez, la utilización del protocolo I2C permitió una comunicación eficiente y estructurada entre las 2 placas Arduino, destacando la flexibilidad que se tiene con este tipo de configuración al tener un maestro y un esclavo que se comunican entre sí.
+A su vez, la utilización del protocolo I2C permitió una comunicación eficiente y estructurada entre las 2 placas Arduino, destacando la flexibilidad que se tiene con este tipo de configuración al tener un maestro y un esclavo que se comunican entre sí. Además, la exploración de la librería Wire brindó un primer acercamiento a este tipo de programaciones que se pueden realizar en una placa Arduino, expandiendo el concoimiento de programación que se tenía hasta el momento sobre estos microcontroladores.
 
 ### Referencias 
 
