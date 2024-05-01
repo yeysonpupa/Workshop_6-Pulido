@@ -3,7 +3,7 @@
 
 ## Introducción 
 
-Este workshop aborda la creación de un controlador de dos niveles en una configuración maestro-esclavo utilizando comunicación I2C con dos placas Arduino UNO, sobre las cual se implementará un sistema en el que el Arduino esclavo estará equipado con un sensor de temperatura análogo LM35DZ, el cual enviará datos de temperatura al controlador maestro cada segundo. El controlador maestro tiene la tarea de monitorear estas lecturas de temperatura y está programado para activar un actuador LED cuando la temperatura exceda los 30°C, sirviendo como una alerta visual inmediata.
+Este workshop aborda la creación de un controlador de dos capas en una configuración maestro-esclavo utilizando comunicación I2C con dos placas Arduino UNO, sobre las cual se implementará un sistema en el que el Arduino esclavo estará equipado con un sensor de temperatura análogo LM35DZ, el cual enviará datos de temperatura al controlador maestro cada segundo. El controlador maestro tiene la tarea de monitorear estas lecturas de temperatura y está programado para activar un actuador LED cuando la temperatura exceda los 30°C, sirviendo como una alerta visual inmediata.
 
 Además, se mostrará el proceso de integración de la configuración con la plataforma ThingSpeak, la cual permitirá el monitoreo de las lecturas actuales de temperatura en tiempo real, lo cual permitirá un acercamiento al prototipado usando tecnologías IoT.
 
@@ -13,11 +13,23 @@ Además, se mostrará el proceso de integración de la configuración con la pla
 
 El término de Internet de las Cosas nace con la necesidad de interconexión para simplificar numerosos aspectos de nuestra vida diaria, facilitando no sólo tareas cotidiana, sino que también procesos en el ámbito industrial mediante la automatización y el control remoto [1]. Es por esto que, IoT se refire a la red de equipos, máquinas, productos y dispositivos conectados entre sí, los cuales pueden comunicarse tanto con la nube como entre los propios dispositivos [2], lo cual es soportado gracias al hardware y software que reune y procesa todos los datos provenientes de múltiples dispositivos; usualmente empleando tecnologías de machine learning e inteligencia artificial con el objetivo de realizar decisiones bien fundamentadas ante los usuarios [3].
 
-Dentro de la industria 4.0, IoT tiene diversos campos de acción, desde las redes eléctricas inteligentes, pasando por ciudades inteligentes, cadenas de suministro digitales inteligentes, hasta proceso de fabricación inteligene y mantenimiento preventivo y predictivo; todo esto genera un volúmen de datos inimaginable, es por esto que se utlizan paneles de control y alertas en tiempo real con tal de obtener claridad sobre indicadores de rendimiento, estadísticas de tiempo medio entre averías y otros datos relevantes [4].
+Dentro de la industria 4.0, IoT tiene diversos campos de acción, desde las redes eléctricas inteligentes, pasando por ciudades inteligentes, cadenas de suministro digitales inteligentes, hasta proceso de fabricación inteligene y mantenimiento preventivo y predictivo; todo esto genera un volúmen de datos inimaginable, es por esto que se utlizan paneles de control, interfaces y alertas en tiempo real con tal de obtener claridad sobre indicadores de rendimiento, estadísticas de tiempo medio entre averías y otros datos relevantes [4].
 
-* Controladores de Dos Niveles:
-* Comunicación I2C:
+* Inter-Integrated Circuit (I2C) Protocol:
+
+El I2C es un protocolo que permite que varios circuitos integrados digitales perfiéricos o esclavos, se comuniquen con uno o más chips controladores o maestros [5]. Para el caso de este workshop ya se sabe que al usar 2 placas Arduino UNO, cada cual tomará su rol respectivo de esclavo y maestro al hacer la conexión, la cual es representada en la Figura 1.
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/c7a90f25-c726-4b8f-a052-4ee5b0c0f48e)
+Figura 1: Conexión para el protocolo I2C [6].
+
+Según la imágen, el protocolo I2C requiere una conexión en dos sentidos, donde primero se tiene un pin de reloj en serie (SCL), correspondiente al pin A5 en cada placa de Arduino UNO, el cual se encarga de pulsar datos a intervalos regulares; y un pin de datos en serie (SDA), correspondiente al pin A4 en cada placa de Arduino UNO, a través del cual se envían datos entre los dos dispositivos [7]. En secciones posteriores se mostrará explicitamente esta conexión descrita.
+
+Por otro lado, para activar el protocolo I2C y poder generar sistemas con él, es importante hacer uso de la biblioteca Wire, la cual usa Arduino para generar la configuración entre los dispositivos, a través del uso de diferentes comandos específicos de este paquete [7], los cuales serán utilizados para la creación de la lógica de este workshop.
+  
 * ThingSpeak:
+
+
+
 * Sensores de Temperatura:
 
 ## Diagrama de Actividad
@@ -45,3 +57,7 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 [3] AWS. (2023). "¿Qué es IoT (Internet de las cosas)?". [En línea]. Disponible en: https://aws.amazon.com/es/what-is/iot/#:~:text=El%20t%C3%A9rmino%20IoT%2C%20o%20Internet,como%20entre%20los%20propios%20dispositivos. (Accedido Mayo 1, 2024).
 
 [4] Oracle. (s. f. ). "¿Qué es el IoT?". [En línea]. Disponible en: https://www.oracle.com/co/internet-of-things/what-is-iot/ (Accedido Mayo 1, 2024).
+
+[5] Paguayo. (2022, Agosto 23). "Protocolo I2C (Inter Integrated Circuit)". [En línea]. Disponible en: https://cursos.mcielectronics.cl/2022/08/23/i2c/ (Accedido Mayo 1, 2024).
+
+[6] Aranda, J. (2024). "Automatización & Control de Procesos - Lecture#7 - Automatizacion_4.0 - Part 1". (Accedido Mayo 1, 2024). 
