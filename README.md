@@ -31,7 +31,13 @@ Por otro lado, para activar el protocolo I2C y poder generar sistemas con él, e
 
 ThingSpeak es una plataforma de análisis enfocada en el Internet de las Cosas, la cual busca faciltar la agregación, visualización y análisis de flujos de datos en tiempo real a través de sus servicios basados en la nube [8]. Con esta solución, el workshop se podrá beneficiar pues da la posibilidad de transmitir los datos cada segundo desde las placas, así como lo requieren las especificaciones, monitoreando y gestionando directamente el correcto funcionamiento del sistema propuesto a través de la representación gráfica de los datos en tiempo real sobre una interfaz o dashboard, facilitando la interpretación y el seguimiento de la temperatura.
 
-* Sensores de Temperatura:
+* Sensor de Temperatura:
+
+Para la realización de este workshop, se hizo uso del sensor de temperatura analógico LM35DZ, el cual se puede observar en la Figura 2, este será el sensor encargado de medir la temperatura en el momento y mandarla a la configuración I2C, para posteriormente ser enviada a ThingSpeak.
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/c545cdb4-a5ea-4e0c-919e-695c9efc0b6d)
+
+Figura 1: Sensor de temperatura analógico LM35DZ [9].
 
 ## Diagrama de Actividad
 
@@ -66,3 +72,5 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 [7] Zambetti, N., Söderby, K., & Hylén, J. (2024, Enero 16). "Protocolo de circuito interintegrado (I2C)". Arduino Docs. [En línea]. Disponible en: https://docs.arduino.cc/learn/communication/wire/ (Accedido Mayo 1, 2024).
 
 [8] ThingSpeak. (s. f. ). "ThingSpeak para proyectos de IoT". ThingSpeak. [En línea]. Disponible en: https://thingspeak.com/ (Accedido Mayo 1, 2024).
+
+[9] Electronica Caribe. (s. f. ). "LM35DZ Sensor de temperatura analógico". Electronica Caribe. [Im<gen]. Disponible en: https://electronicacaribe.com/product/lm35dz-sensor-de-temperatura-analogico/ (Accedido Mayo 1, 2024).
