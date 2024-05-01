@@ -85,6 +85,14 @@ Ahora, haciendo uso del bucle, se llame a *Wire.requestFrom(8, 1)*, el cual soli
 
 Al capturar la temperatura se realizan 2 acciones, la de imprimirla en el monitor serial y la de verificar si es mayor de 30°C, para así acivar o desactivar la alerta LED que se tiene en el pin 13, esto se hace con una lógica simple de condicional y el *digitalWrite*. Finalmente, se define con *delay* que la captura de datos se realice cada 1 segundo, tal como lo pide el enunciado del workshop.
 
+Con el código realizado para cada parte del bus de datos I2C, se realizan las pruebas pertinentes para saber qué funciona, cuyas evidencias se muestran en la Figura 7.
+
+![Imagen1](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/8efe289b-5cdd-42e4-8499-b93788a4f3c0)
+
+Figura 6: Funcionamiento del sistema en TinkerCad.
+
+En la Figura 6.a, se ve como el Arduino esclavo envía la temperatura por debajo de los 30°C y por consiguiente el LED está apagado, mientras que en la Figura 6.b, el Arduino esclavo está enviando una temperatura mayor a 30°C, haciendo que el LED se encienda. Para el otro lado del bus I2C, en la Figura 6.c, se ve como el Arduino maestro recibe una temperatura por debajo de los 30°C y por consiguiente no enciende el LED, mientras que en la Figura 6.d, el Arduino maestro está recibiendo una temperatura mayor a 30°C, haciendo que encienda el LED.
+
 ## Implementación Física
 
 ## Implementación IoT
