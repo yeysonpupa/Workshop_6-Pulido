@@ -51,7 +51,7 @@ Figura 3: Diagrama de Actividad del sistema.
 
 Basado en este entendimiento del problema, se prosigue a realizar la construcción digital del circuito haciendo uso de TinkerCad mostrado en la Figura 4, donde se conectaron lso 2 Arduinos UNO según las especificaciones de pines de las que se habló en el marco teórico, donde para realizar el protocolo I2C es necesario conectar el pin de reloj en serie (SCL), correspondiente al pin A5 y el pin de datos en serie (SDA), correspondiente al pin A4, además, de las respectivas GND y VCC [7].
 
-Por otro lado, se conecta el sensor de temperatura, que para el caso de TinkerCad es de referencia TMP36, sin embargo, cumple la misma función que el sensor LM35DZ que será usado en la implementación real. Finalmente, se conecta la alerta visual LED junto con su debida resistencia de 220 Ohms.
+Por otro lado, se conecta el sensor de temperatura, que para el caso de TinkerCad es de referencia TMP36, sin embargo, cumple la misma función que el sensor LM35DZ que será usado en la implementación real. Finalmente, se conecta la alerta visual LED junto con su debida resistencia de 220 Ohms [6].
 
 ![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/ae07f47d-cd60-4aaa-95cb-59f484a48907)
 
