@@ -59,7 +59,31 @@ Figura 4: Circuito del sistema en TinkerCad.
 
 ## Código
 
-Con la configuración realizada, se real
+Con la configuración realizada, es momento de relizar la lógica de todo el proceso, para esto, además del lenguaje de Arduino que conmunmente se usa, se debe importar la librería Wire de la cual se habló anteriormente, pues solo con esta librería se puede configurar el envío y recibimiento de datos entre el Arduino esclavo y el Arduino Maestro. Además, se hace uso de la documentación de I2C brindada por Arduino con tal de saber qué comandos utilizar para configurar cada puerto [7].
+
+Primero, se presenta la configuración del Arduino esclavo, con el código expuesto en la Figura 5.
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/f43ce3a4-5e49-4490-96ea-7a7a41da02f1)
+
+Figura 5: Código Arduino esclavo [7] [10] [11].
+
+En este código se inicia con la importación de la librería Wire, mediante *#include <Wire.h>*, posteriormente se une el esclavo al bus I2C con la dirección #8 con *Wire.begin*, luego se establece el *requestEvent* para ser llamado cada vez que el maestro solicite el dato de temperatura con *Wire.onRequest(requestEvent)*.
+
+En la función de *requestEvent*, primero se lee el valor analógico obtenido mediante el pin A0 con *analogRead*, donde está conectado el sensor de temperatura LM35DZ, para posteriormente ser leido como un voltaje usando la referencia de 5V de la placa y  siendo convertido a digital usando la resolución de conversión análoga-digital [11]. Finalmente, se calcula la temperatura en grados centígrados, donde se sabe que 1ºC es igual a 10mV [11].
+
+Por otro lado, se incluye la función básica de monitor serial para ver el valor de temperatura capturado, y posteriormente este se envía al Arduino maestro haciendo uso del comando *Wire.write*.
+
+Ahora, se presenta la configuración del Arduino maestro, con el código expuesto en la Figura 6.
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/0dbd72f7-5544-4b53-8f26-5829c6ce555d)
+
+Figura 6: Código Arduino maestro [7] [10] [11].
+
+En el segundo código, se importa de igual manera la librería Wire y se configura el pin digital 13 como salida, correspondiente al LED, además, se inicia la biblioteca Wire sin parámetros, es decir, *Wire.begin()*, lo que configura ese dispositivo Arduino como maestro en el bus I2C [7].
+
+Ahora, haciendo uso del bucle, se llame a *Wire.requestFrom(8, 1)*, el cual solicita los datos del Arduino esclavo que se dejó configurado on la dirección #8 en el bus I2C. Después, se genera el bucle *while (Wire.available())*, que ejecutará la recolección de temperatura siempre y cuando haya datos disponibles para leer del esclavo, los cuales son capturados con *Wire.read()*.
+
+Al capturar la temperatura se realizan 2 acciones, la de imprimirla en el monitor serial y la de verificar si es mayor de 30°C, para así acivar o desactivar la alerta LED que se tiene en el pin 13, esto se hace con una lógica simple de condicional y el *digitalWrite*. Finalmente, se define con *delay* que la captura de datos se realice cada 1 segundo, tal como lo pide el enunciado del workshop.
 
 ## Implementación Física
 
@@ -89,4 +113,8 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 
 [8] ThingSpeak. (s. f. ). "ThingSpeak para proyectos de IoT". ThingSpeak. [En línea]. Disponible en: https://thingspeak.com/ (Accedido Mayo 1, 2024).
 
-[9] Electronica Caribe. (s. f. ). "LM35DZ Sensor de temperatura analógico". Electronica Caribe. [Im<gen]. Disponible en: https://electronicacaribe.com/product/lm35dz-sensor-de-temperatura-analogico/ (Accedido Mayo 1, 2024).
+[9] Electronica Caribe. (s. f. ). "LM35DZ Sensor de temperatura analógico". Electronica Caribe. [Imagen]. Disponible en: https://electronicacaribe.com/product/lm35dz-sensor-de-temperatura-analogico/ (Accedido Mayo 1, 2024).
+
+[10] OpenAI. (2015). ChatGPT [En línea]. Disponible en: https://openai.com/chatgpt (Accedido Mayo 1, 2024).
+
+[11] Castaño, S. (s. f. ). "ADC Arduino – Entradas Analógicas". Control Automático Educación. [En línea]. Disponible en: https://controlautomaticoeducacion.com/arduino/entradas-analogicas-adc/ (Accedido Mayo 1, 2024).
