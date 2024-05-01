@@ -87,13 +87,23 @@ Al capturar la temperatura se realizan 2 acciones, la de imprimirla en el monito
 
 Con el código realizado para cada parte del bus de datos I2C, se realizan las pruebas pertinentes para saber qué funciona, cuyas evidencias se muestran en la Figura 7.
 
-![Imagen1](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/8efe289b-5cdd-42e4-8499-b93788a4f3c0)
+![Imagen1](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/940e3c5c-00f5-4b5b-8944-81280342c202)
 
 Figura 6: Funcionamiento del sistema en TinkerCad.
 
 En la Figura 6.a, se ve como el Arduino esclavo envía la temperatura por debajo de los 30°C y por consiguiente el LED está apagado, mientras que en la Figura 6.b, el Arduino esclavo está enviando una temperatura mayor a 30°C, haciendo que el LED se encienda. Para el otro lado del bus I2C, en la Figura 6.c, se ve como el Arduino maestro recibe una temperatura por debajo de los 30°C y por consiguiente no enciende el LED, mientras que en la Figura 6.d, el Arduino maestro está recibiendo una temperatura mayor a 30°C, haciendo que encienda el LED.
 
 ## Implementación Física
+
+Ya que se ha comprobado el funcionamiento de la solución de manera simulada en TinkerCad, ahora se busca realizar un prototipo físico usando 2 placas de Arduino UNO, un LED rojo, una resistencia de 220 Ohms y a diferencia de la versión simulada donde se usó un sensor de temperatura TMP36, en esta versión se utiliza un sensor LM35DZ. Por lo que, tras realizar la conexión en configuración I2C, la implementación física queda tal como se muestra en la Figura 7.
+
+Figura 7: Prototipo físico del sistema.
+
+Al conectar las placas de Arduino al computador y cargar el código correspondiente a cada una haciendo uso de Arduino IDE, se corre la lógica para comprobar los escenarios de funcionamiento, los cuales se evidencian en la Figura 8.
+
+Figura 8: Funcionamiento del sistema en la implementación física.
+
+En la Figura 8.a, se ve como el Arduino esclavo envía la temperatura por debajo de los 30°C y por consiguiente el LED está apagado, mientras que en la Figura 8.b, el Arduino esclavo está enviando una temperatura mayor a 30°C, haciendo que el LED se encienda. Para el otro lado del bus I2C, en la Figura 8.c, se ve como el Arduino maestro recibe una temperatura por debajo de los 30°C y por consiguiente no enciende el LED, mientras que en la Figura 8.d, el Arduino maestro está recibiendo una temperatura mayor a 30°C, haciendo que encienda el LED.
 
 ## Implementación IoT
 
