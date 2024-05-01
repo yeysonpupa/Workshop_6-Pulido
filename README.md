@@ -113,6 +113,10 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 
 ## Conclusiones
 
+Se puede concluir que el sistema fue capaz de responder de manera adecuada a las variaciones de temperatura en tiempo real, activando el LED cuando la temperatura excedía los 30°C, lo que sirve como una alerta visual efectiva para los usuarios. Esto indica que el diseño del sistema y de la lógica de programación implementada en las placas fue la adecuada para manejar los escenarios al momento de las pruebas en el prototipo real.
+
+A su vez, la utilización del protocolo I2C permitió una comunicación eficiente y estructurada entre las 2 placas Arduino, destacando la flexibilidad que se tiene con este tipo de configuración al tener un maestro y un esclavo que se comunican entre sí.
+
 ### Referencias 
 
 [1] Grupo de investigación BISITE. (s. f. ). "¿Cómo surgió el internet de las cosas?". BISITE. [En línea]. Disponible en: https://bisite.usal.es/es/blog/formacion/21/04/21/como-surgio-el-internet-de-las-cosas-BISITE#:~:text=Se%20podr%C3%ADa%20decir%20que%2C%20fue,de%20internet%20en%20cualquier%20cosa. (Accedido Mayo 1, 2024).
