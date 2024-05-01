@@ -20,6 +20,7 @@ Dentro de la industria 4.0, IoT tiene diversos campos de acción, desde las rede
 El I2C es un protocolo que permite que varios circuitos integrados digitales perfiéricos o esclavos, se comuniquen con uno o más chips controladores o maestros [5]. Para el caso de este workshop ya se sabe que al usar 2 placas Arduino UNO, cada cual tomará su rol respectivo de esclavo y maestro al hacer la conexión, la cual es representada en la Figura 1.
 
 ![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/c7a90f25-c726-4b8f-a052-4ee5b0c0f48e)
+
 Figura 1: Conexión para el protocolo I2C [6].
 
 Según la imágen, el protocolo I2C requiere una conexión en dos sentidos, donde primero se tiene un pin de reloj en serie (SCL), correspondiente al pin A5 en cada placa de Arduino UNO, el cual se encarga de pulsar datos a intervalos regulares; y un pin de datos en serie (SDA), correspondiente al pin A4 en cada placa de Arduino UNO, a través del cual se envían datos entre los dos dispositivos [7]. En secciones posteriores se mostrará explicitamente esta conexión descrita.
@@ -28,7 +29,7 @@ Por otro lado, para activar el protocolo I2C y poder generar sistemas con él, e
   
 * ThingSpeak:
 
-
+ThingSpeak es una plataforma de análisis enfocada en el Internet de las Cosas, la cual busca faciltar la agregación, visualización y análisis de flujos de datos en tiempo real a través de sus servicios basados en la nube [8]. Con esta solución, el workshop se podrá beneficiar pues da la posibilidad de transmitir los datos cada segundo desde las placas, así como lo requieren las especificaciones, monitoreando y gestionando directamente el correcto funcionamiento del sistema propuesto a través de la representación gráfica de los datos en tiempo real sobre una interfaz o dashboard, facilitando la interpretación y el seguimiento de la temperatura.
 
 * Sensores de Temperatura:
 
@@ -50,14 +51,18 @@ Todo el proceso de diseño, programación, prototipado y demostración presentad
 
 ### Referencias 
 
-[1] Grupo de investigación BISITE. (s. f. ). "¿Cómo surgió el internet de las cosas?". [En línea]. Disponible en: https://bisite.usal.es/es/blog/formacion/21/04/21/como-surgio-el-internet-de-las-cosas-BISITE#:~:text=Se%20podr%C3%ADa%20decir%20que%2C%20fue,de%20internet%20en%20cualquier%20cosa. (Accedido Mayo 1, 2024).
+[1] Grupo de investigación BISITE. (s. f. ). "¿Cómo surgió el internet de las cosas?". BISITE. [En línea]. Disponible en: https://bisite.usal.es/es/blog/formacion/21/04/21/como-surgio-el-internet-de-las-cosas-BISITE#:~:text=Se%20podr%C3%ADa%20decir%20que%2C%20fue,de%20internet%20en%20cualquier%20cosa. (Accedido Mayo 1, 2024).
 
-[2] Azure. (s. f. ). "¿Qué es IoT?". [En línea]. Disponible en: https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-iot (Accedido Mayo 1, 2024).
+[2] Azure. (s. f. ). "¿Qué es IoT?". [En línea]. Azure. Disponible en: https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-iot (Accedido Mayo 1, 2024).
 
-[3] AWS. (2023). "¿Qué es IoT (Internet de las cosas)?". [En línea]. Disponible en: https://aws.amazon.com/es/what-is/iot/#:~:text=El%20t%C3%A9rmino%20IoT%2C%20o%20Internet,como%20entre%20los%20propios%20dispositivos. (Accedido Mayo 1, 2024).
+[3] AWS. (2023). "¿Qué es IoT (Internet de las cosas)?". AWS. [En línea]. Disponible en: https://aws.amazon.com/es/what-is/iot/#:~:text=El%20t%C3%A9rmino%20IoT%2C%20o%20Internet,como%20entre%20los%20propios%20dispositivos. (Accedido Mayo 1, 2024).
 
-[4] Oracle. (s. f. ). "¿Qué es el IoT?". [En línea]. Disponible en: https://www.oracle.com/co/internet-of-things/what-is-iot/ (Accedido Mayo 1, 2024).
+[4] Oracle. (s. f. ). "¿Qué es el IoT?". Oracle. [En línea]. Disponible en: https://www.oracle.com/co/internet-of-things/what-is-iot/ (Accedido Mayo 1, 2024).
 
-[5] Paguayo. (2022, Agosto 23). "Protocolo I2C (Inter Integrated Circuit)". [En línea]. Disponible en: https://cursos.mcielectronics.cl/2022/08/23/i2c/ (Accedido Mayo 1, 2024).
+[5] Paguayo. (2022, Agosto 23). "Protocolo I2C (Inter Integrated Circuit)". MCI Educacion. [En línea]. Disponible en: https://cursos.mcielectronics.cl/2022/08/23/i2c/ (Accedido Mayo 1, 2024).
 
 [6] Aranda, J. (2024). "Automatización & Control de Procesos - Lecture#7 - Automatizacion_4.0 - Part 1". (Accedido Mayo 1, 2024). 
+
+[7] Zambetti, N., Söderby, K., & Hylén, J. (2024, Enero 16). "Protocolo de circuito interintegrado (I2C)". Arduino Docs. [En línea]. Disponible en: https://docs.arduino.cc/learn/communication/wire/ (Accedido Mayo 1, 2024).
+
+[8] ThingSpeak. (s. f. ). "ThingSpeak para proyectos de IoT". ThingSpeak. [En línea]. Disponible en: https://thingspeak.com/ (Accedido Mayo 1, 2024).
