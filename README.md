@@ -97,7 +97,7 @@ En la Figura 7.a, se ve como el Arduino esclavo envía la temperatura por debajo
 
 Para pasar los datos a la nube, se debe reconfigurar la configuración física realizada, pues se busca que el dato que llega al Arduino maestro pase a la plataforma IoT ThingSpeak, sin embargo, no es posible hacerlo a menos de que se conecte a la red, para esto, simplemente se reemplaza el Arduino maestro por un módulo ESP32 mostrado en la Figura 8 y el cual permite conectarse vía wifi a ThingSpeak.
 
-![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/4bca3ed5-588c-44a8-8ced-45ff156fc5bb)
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/32f11159-3dc6-4361-a397-095f65084e1c)
 
 Figura 8: Arduino ESP32 [12].
 
