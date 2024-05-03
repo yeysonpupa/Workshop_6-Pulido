@@ -123,16 +123,15 @@ Ya que el envío a ThingSpeak sucede únicamente por parte del maestro, no es ne
 
 ## Implementación Física
 
-Ahora, es momento de realizar la conexión en físico, pero teniendo en cuenta que a diferencia de la versión en TinkerCad, toda la lógica del Arduino maestro será contenida en el ESP32, quedando el montaje como se ve en la Figura 14.
+Ahora, es momento de realizar la conexión en físico, pero teniendo en cuenta que a diferencia de la versión en TinkerCad, toda la lógica del Arduino maestro será contenida en el ESP32, el cual también tiene pines de SCL y SDA que deben ser conectados al Arduino esclavo [15], quedando el montaje como se ve en la Figura 14.
 
 Figura 14: Prototipo físico del sistema.
 
-Se conecta la placa de Arduino esclavo al computador y usando Arduino IDE se carga el código dispuesto, por lo que al correrlo, se puede observar como el monitor serial recoge el valor de manera local proveniente del sensor de temperatura (Figura 15) y a su vez pasa los datos al ESP32 (Figura 16) y por consiguiente a ThingSpeak (Figura 17); además, se comprueba también el funcionamiento del actuador LED (Figura 18).
+Se conecta la placa de Arduino esclavo al computador y usando Arduino IDE se carga el código dispuesto, por lo que al correrlo, se puede observar como el monitor serial recoge el valor de manera local proveniente del sensor de temperatura (Figura 15).
 
 Figura 15: Funcionamiento del Arduino esclavo del prototipo.
-Figura 16: Funcionamiento del ESP32 del prototipo.
-Figura 17: Funcionamiento de ThingSpeak.
-Figura 18: Funcionamiento del LED.
+
+Aunque el objetivo final era que el Arduino esclavo pasara los datos al ESP32 de manera física I2C y posteriormente a ThingSpeak en la nube, la placa ESP32 utilizada para la implementación de la Figura 15 no se pudo conectar correctamente al computador con el Arduino IDE, por lo que el código maestro de la Figura 11 no pudo ser cargado, dejando la implementación física únicamente con el funcionamiento del esclavo.
 
 ## Video
 
@@ -144,7 +143,7 @@ Se puede concluir que el sistema fue capaz de responder de manera adecuada a las
 
 A su vez, la utilización del protocolo I2C permitió una comunicación eficiente y estructurada entre las 2 placas Arduino, destacando la flexibilidad que se tiene con este tipo de configuración al tener un maestro y un esclavo que se comunican entre sí. Además, la exploración de la librería Wire brindó un primer acercamiento a este tipo de programaciones que se pueden realizar en una placa Arduino, expandiendo el concoimiento de programación que se tenía hasta el momento sobre estos microcontroladores.
 
-Se adquirió conocimiento valioso sobre como realizar una conexión IoT usando elementos de prototipado rápido, conociendo la forma de cómo ThingSpeak sirve como herramienta para realizar un monitoreo en tiempo real efectivo de los cambios de temperatura en tiempo real, articulándose bien con la configuración I2C generada y el código de programación pensado para lo mismo.
+Se adquirió conocimiento valioso sobre como realizar una conexión IoT usando elementos de prototipado rápido a pesar de no resultar como se quería, conociendo la forma de cómo ThingSpeak sirve como herramienta para realizar un monitoreo en tiempo real de variables tiempo real, lo cual queda precisamente como una deuda técnica de este proyecto.
 
 Finalmente, la articulación de planear una idea desde el diagrama de actividades bridnó un entendimiento claro desde el inicio sobre los requerimientos del sistema y el camino que debía seguir la lógica de programación, facilitando la construcción del código y su posterior implementación exitosa en el ambiente simulado de TinkerCad y en el prototipo físico.
 
