@@ -117,6 +117,8 @@ Se puede concluir que el sistema fue capaz de responder de manera adecuada a las
 
 A su vez, la utilización del protocolo I2C permitió una comunicación eficiente y estructurada entre las 2 placas Arduino, destacando la flexibilidad que se tiene con este tipo de configuración al tener un maestro y un esclavo que se comunican entre sí. Además, la exploración de la librería Wire brindó un primer acercamiento a este tipo de programaciones que se pueden realizar en una placa Arduino, expandiendo el concoimiento de programación que se tenía hasta el momento sobre estos microcontroladores.
 
+Se adquirió conocimiento valioso sobre como realizar una conexión IoT usando elementos de prototipado rápido, conociendo la forma de cómo ThingSpeak sirve como herramienta para realizar un monitoreo en tiempo real efectivo de los cambios de temperatura en tiempo real, articulándose bien con la configuración I2C generada y el código de programación pensado para lo mismo.
+
 Finalmente, la articulación de planear una idea desde el diagrama de actividades bridnó un entendimiento claro desde el inicio sobre los requerimientos del sistema y el camino que debía seguir la lógica de programación, facilitando la construcción del código y su posterior implementación exitosa en el ambiente simulado de TinkerCad y en el prototipo físico.
 
 ### Referencias 
