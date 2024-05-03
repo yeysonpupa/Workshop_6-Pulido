@@ -115,7 +115,7 @@ Figura 10: ID Channel y API Key ThingSpeak.
 
 Teniendo ThingSpeak configurado, se modifica el código del Arduno maestro, incluyendo ahora las librería de WiFi y ThingSpeak para realizar el intercambio de datos entre el ESP32 y ThingSpeak [13], tal como se observa en el código de la Figura 11, especificando datos importantes para la conexión como el SSID del WiFi mediante el cual se realizará la conexión, la contraseña del wifi del mismo, el ID de canal de ThingSpeak y la API key de escritura [14].
 
-![Imagen1](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/100e64a1-a28b-41b7-b32e-45be11591886)
+![Imagen1](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/5eecb338-6219-4f3e-9854-b8908413b48c)
 
 Figura 11: Código Arduino maestro usando ESP32 [10] [13] [14].
 
