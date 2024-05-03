@@ -1,4 +1,4 @@
-# Workshop 6 - Yeyson Esteban Pulido Parra
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/ee5102f2-bf39-4fcd-89cd-8e0378b7a5fc)# Workshop 6 - Yeyson Esteban Pulido Parra
 ### Automatización y Control de Procesos
 
 ## Introducción 
@@ -93,19 +93,40 @@ Figura 7: Funcionamiento del sistema en TinkerCad.
 
 En la Figura 7.a, se ve como el Arduino esclavo envía la temperatura por debajo de los 30°C y por consiguiente el LED está apagado, mientras que en la Figura 7.b, el Arduino esclavo está enviando una temperatura mayor a 30°C, haciendo que el LED se encienda. Para el otro lado del bus I2C, en la Figura 7.c, se ve como el Arduino maestro recibe una temperatura por debajo de los 30°C y por consiguiente no enciende el LED, mientras que en la Figura 7.d, el Arduino maestro está recibiendo una temperatura mayor a 30°C, haciendo que encienda el LED.
 
+## Implementación IoT
+
+Para pasar los datos a la nube, se debe reconfigurar la configuración física realizada, pues se busca que el dato que llega al Arduino maestro pase a la plataforma IoT ThingSpeak, sin embargo, no es posible hacerlo a menos de que se conecte a la red, para esto, simplemente se reemplaza el Arduino maestro por un módulo ESP32 mostrado en la Figura 8 y el cual permite conectarse vía wifi a ThingSpeak.
+
+Figura 8: Arduino ESP32 [12].
+
+En ThingSpeak, se crea una cuenta y se genera un nuevo canal de visualización, donde se configura para que monitoreé la variable de temperatura, como se ve en la Figura 9.
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/dc35e540-50b2-42a1-af30-0e712012aaea)
+
+Figura 9: Configuración de canal en ThingSpeak.
+
+Además, se genera un ID del canal y una API Key de escritura (Figura 10), las cuales serán útiles para el siguiente paso.
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/2f3e82b2-90b4-4385-9761-59346d81e287)
+
+Figura 10: ID Channel y API Key ThingSpeak.
+
+Teniendo ThingSpeak configurado, se modifica el código del Arduno maestro, incluyendo ahora las librería de WiFi y ThingSpeak para realizar el intercambio de datos entre el ESP32 y ThingSpeak [13], tal como se observa en el código de la Figura 11, especificando datos importantes para la conexión como el SSID del WiFi mediante el cual se realizará la conexión, la contraseña del wifi del mismo, el ID de canal de ThingSpeak y la API key de escritura [14].
+
+Figura 11: Código Arduino maestro usando ESP32 [10] [13] [14].
+
 ## Implementación Física
 
-Ya que se ha comprobado el funcionamiento de la solución de manera simulada en TinkerCad, ahora se busca realizar un prototipo físico usando 2 placas de Arduino UNO, un LED rojo, una resistencia de 220 Ohms y a diferencia de la versión simulada donde se usó un sensor de temperatura TMP36, en esta versión se utiliza un sensor LM35DZ. Por lo que, tras realizar la conexión en configuración I2C, la implementación física queda tal como se muestra en la Figura 8.
+Ahora, es momento de realizar la conexión en físico, pero teniendo en cuenta que a diferencia de la versión en TinkerCad, toda la lógica del Arduino maestro será contenida en el ESP32, quedando el montaje como se ve en la Figura 14.
 
-Figura 8: Prototipo físico del sistema.
+Figura 14: Prototipo físico del sistema.
 
-Al conectar las placas de Arduino al computador y cargar el código correspondiente a cada una haciendo uso de Arduino IDE, se corre la lógica para comprobar los escenarios de funcionamiento, los cuales se evidencian en la Figura 9.
+Se conecta la placa de Arduino esclavo al computador y usando Arduino IDE se carga el código dispuesto, por lo que al correrlo, se puede observar como el monitor serial recoge el valor de manera local proveniente del sensor de temperatura (Figura 15) y a su vez pasa los datos al ESP32 (Figura 16) y por consiguiente a ThingSpeak (Figura 17); además, se comprueba también el funcionamiento del actuador LED (Figura 18).
 
-Figura 9: Funcionamiento del sistema en la implementación física.
-
-En la Figura 9.a, se ve como el Arduino esclavo envía la temperatura por debajo de los 30°C y por consiguiente el LED está apagado, mientras que en la Figura 9.b, el Arduino esclavo está enviando una temperatura mayor a 30°C, haciendo que el LED se encienda. Para el otro lado del bus I2C, en la Figura 9.c, se ve como el Arduino maestro recibe una temperatura por debajo de los 30°C y por consiguiente no enciende el LED, mientras que en la Figura 9.d, el Arduino maestro está recibiendo una temperatura mayor a 30°C, haciendo que encienda el LED.
-
-## Implementación IoT
+Figura 15: Funcionamiento del Arduino esclavo del prototipo.
+Figura 16: Funcionamiento del ESP32 del prototipo.
+Figura 17: Funcionamiento de ThingSpeak.
+Figura 18: Funcionamiento del LED.
 
 ## Video
 
