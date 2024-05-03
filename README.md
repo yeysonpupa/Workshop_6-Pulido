@@ -139,7 +139,7 @@ Aunque el objetivo final era que el Arduino esclavo pasara los datos al ESP32 de
 
 ## Video
 
-Todo el proceso de diseño, programación, prototipado y demostración presentado a lo largo de este workshop es presentado en el siguiente video:
+Todo el proceso de diseño, programación, prototipado y demostración presentado a lo largo de este workshop es presentado en el siguiente video: https://youtu.be/glLmryZBP2U
 
 ## Conclusiones
 
