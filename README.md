@@ -125,15 +125,20 @@ Ya que el envío a ThingSpeak sucede únicamente por parte del maestro, no es ne
 
 Ahora, es momento de realizar la conexión en físico, pero teniendo en cuenta que a diferencia de la versión en TinkerCad, toda la lógica del Arduino maestro será contenida en el ESP32, el cual también tiene pines de SCL y SDA que deben ser conectados al Arduino esclavo [15], quedando el montaje como se ve en la Figura 14.
 
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/472fe3b1-ae1d-46fe-ae96-cae95ddea661)
+
 Figura 14: Prototipo físico del sistema.
 
 Se conecta la placa de Arduino esclavo al computador y usando Arduino IDE se carga el código dispuesto, por lo que al correrlo, se puede observar como el monitor serial recoge el valor de manera local proveniente del sensor de temperatura (Figura 15).
+
+![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/f10b1eab-4088-4cd5-aa5e-c5c54a5ce302)
 
 Figura 15: Funcionamiento del Arduino esclavo del prototipo.
 
 Aunque el objetivo final era que el Arduino esclavo pasara los datos al ESP32 de manera física I2C y posteriormente a ThingSpeak en la nube, la placa ESP32 utilizada para la implementación de la Figura 15 no se pudo conectar correctamente al computador con el Arduino IDE, por lo que el código maestro de la Figura 11 no pudo ser cargado, dejando la implementación física únicamente con el funcionamiento del esclavo.
 
 ## Video
+
 
 Todo el proceso de diseño, programación, prototipado y demostración presentado a lo largo de este workshop es presentado en el siguiente video:
 
@@ -170,3 +175,11 @@ Finalmente, la articulación de planear una idea desde el diagrama de actividade
 [10] OpenAI. (2015). ChatGPT [En línea]. Disponible en: https://openai.com/chatgpt (Accedido Mayo 1, 2024).
 
 [11] Castaño, S. (s. f. ). "ADC Arduino – Entradas Analógicas". Control Automático Educación. [En línea]. Disponible en: https://controlautomaticoeducacion.com/arduino/entradas-analogicas-adc/ (Accedido Mayo 1, 2024).
+
+[12] Colombianizate. (s. f. ). "Tarjeta ESP32 wifi + bluetooth 4.2". Colombianizate. [Imagen]. Disponible en: https://www.colombianizate.com.co/tienda/arduino/wifi-bluetooth-rf/tarjeta-esp32-wifi-bluetooth-4-2/ (Accedido Mayo 2, 2024).
+
+[13] TodoMaker. (2022, Enero 10). "ESP32 + THINGSBOARD: ENVIO DE DATOS". TodoMaker. [Video]. Disponible en: https://www.youtube.com/watch?v=0l_5hioeBAE (Accedido Mayo 2, 2024).
+
+[14] Carranza, S. (2022, Enero 4). "ENVÍO DE DATOS A THINGSPEAK USANDO ESP32". TodoMaker. [En línea]. Disponible en: https://todomaker.com/blog/envio-de-datos-a-thingspeak-usando-esp32/ (Accedido Mayo 2, 2024).
+
+[15] Lozano, R. (2021, Junio 13). "Programar ESP32 con IDE Arduino". Talos Electronics. [En línea]. Disponible en: https://www.taloselectronics.com/blogs/tutoriales/programar-esp32-con-ide-arduino (Accedido Mayo 2, 2024).
