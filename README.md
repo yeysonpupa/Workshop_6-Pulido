@@ -1,4 +1,4 @@
-![image](https://github.com/yeysonpupa/Workshop_6-Pulido/assets/101272542/ee5102f2-bf39-4fcd-89cd-8e0378b7a5fc)# Workshop 6 - Yeyson Esteban Pulido Parra
+# Workshop 6 - Yeyson Esteban Pulido Parra
 ### Automatización y Control de Procesos
 
 ## Introducción 
